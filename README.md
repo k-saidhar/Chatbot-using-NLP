@@ -43,7 +43,6 @@ cd <repository-directory>
 It’s recommended to create a virtual environment for managing dependencies:
 
 ```bash
-Copy code
 python -m venv venv
 source venv/bin/activate # On Windows use `venv\Scripts\activate` 3. Install Required Packages
 ```
@@ -51,15 +50,12 @@ source venv/bin/activate # On Windows use `venv\Scripts\activate` 3. Install Req
 Install the required Python packages from the requirements.txt file:
 
 ```bash
-Copy code
 pip install -r requirements.txt 4. Download NLTK Data
 ```
 
 To ensure that the NLTK library functions correctly, you need to download the necessary datasets:
 
 ```bash
-python
-Copy code
 import nltk
 nltk.download('punkt')
 ```
@@ -68,7 +64,6 @@ Usage
 To run the chatbot application, use the following command:
 
 ```bash
-Copy code
 streamlit run app.py
 ```
 
@@ -78,8 +73,7 @@ Intents Data
 The chatbot’s behavior is governed by the intents.json file, which defines various user intents (tags), input patterns, and corresponding responses. You can modify this file to add new intents or adjust existing ones. Example of the file structure:
 
 ```bash
-json
-Copy code
+
 {"tag": "greeting",
     "patterns": [
       "Hi",
