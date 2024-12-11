@@ -36,44 +36,65 @@ Clone this repository to your local machine:
 ```bash
 git clone <repository-url>
 cd <repository-directory>
+```
+
 2. Create a Virtual Environment (Optional but Recommended)
+
 It’s recommended to create a virtual environment for managing dependencies:
 
-bash
+```bash
 Copy code
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-3. Install Required Packages
+source venv/bin/activate # On Windows use `venv\Scripts\activate` 3. Install Required Packages
+```
+
 Install the required Python packages from the requirements.txt file:
 
-bash
+```bash
 Copy code
-pip install -r requirements.txt
-4. Download NLTK Data
+pip install -r requirements.txt 4. Download NLTK Data
+```
+
 To ensure that the NLTK library functions correctly, you need to download the necessary datasets:
 
+```bash
 python
 Copy code
 import nltk
 nltk.download('punkt')
+```
+
 Usage
 To run the chatbot application, use the following command:
 
-bash
+```bash
 Copy code
 streamlit run app.py
+```
+
 Once the application is running, open the provided local URL in a web browser to interact with the chatbot. Type your message in the input box and press Enter to see the chatbot's response.
 
 Intents Data
 The chatbot’s behavior is governed by the intents.json file, which defines various user intents (tags), input patterns, and corresponding responses. You can modify this file to add new intents or adjust existing ones. Example of the file structure:
 
+```bash
 json
 Copy code
-{
-  "tag": "greeting",
-  "patterns": ["Hi", "Hello", "How are you?", "Is anyone there?"],
-  "responses": ["Hi, I am your assistant!", "Hello, how can I help?"]
-}
+{"tag": "greeting",
+    "patterns": [
+      "Hi",
+      "How are you",
+      "Is anyone there?",
+      "Hello",
+      "Whats up"
+    ],
+    "responses": [
+      "Hi , i am your paramedic assistant"
+    ],
+    "context_set": ""
+  }
+```
+
 Conversation History
 The chatbot saves each interaction to a CSV file (chat_log.csv). You can view the conversation history through the sidebar on the Streamlit interface.
 
@@ -105,10 +126,10 @@ markdown
 Copy code
 
 ### Key Changes:
+
 - **Clarified Structure**: The instructions are organized in a clear sequence of steps for cloning, setting up, and running the chatbot project.
 - **Replaced Placeholder**: Replaced `<repository-url>` and `<repository-directory>` with a general instruction to modify them with real details.
 - **Usage Details**: Emphasized usage steps for the Streamlit interface.
 - **Contributing Section**: Simplified and emphasized easy contribution steps for GitHub collaboration.
 
 This version provides a clean and easily navigable README for your GitHub project.
-```
